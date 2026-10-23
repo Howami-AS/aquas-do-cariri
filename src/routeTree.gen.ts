@@ -10,33 +10,154 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AtracoesRouteImport } from './routes/atracoes'
+import { Route as ComoChegarRouteImport } from './routes/como-chegar'
+import { Route as ContatoRouteImport } from './routes/contato'
+import { Route as FaqRouteImport } from './routes/faq'
+import { Route as FuncionamentoRouteImport } from './routes/funcionamento'
+import { Route as GaleriaRouteImport } from './routes/galeria'
+import { Route as IngressosRouteImport } from './routes/ingressos'
+import { Route as RegrasRouteImport } from './routes/regras'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AtracoesRoute = AtracoesRouteImport.update({
+  id: '/atracoes',
+  path: '/atracoes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ComoChegarRoute = ComoChegarRouteImport.update({
+  id: '/como-chegar',
+  path: '/como-chegar',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContatoRoute = ContatoRouteImport.update({
+  id: '/contato',
+  path: '/contato',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FuncionamentoRoute = FuncionamentoRouteImport.update({
+  id: '/funcionamento',
+  path: '/funcionamento',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GaleriaRoute = GaleriaRouteImport.update({
+  id: '/galeria',
+  path: '/galeria',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IngressosRoute = IngressosRouteImport.update({
+  id: '/ingressos',
+  path: '/ingressos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RegrasRoute = RegrasRouteImport.update({
+  id: '/regras',
+  path: '/regras',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/atracoes': typeof AtracoesRoute
+  '/como-chegar': typeof ComoChegarRoute
+  '/contato': typeof ContatoRoute
+  '/faq': typeof FaqRoute
+  '/funcionamento': typeof FuncionamentoRoute
+  '/galeria': typeof GaleriaRoute
+  '/ingressos': typeof IngressosRoute
+  '/regras': typeof RegrasRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/atracoes': typeof AtracoesRoute
+  '/como-chegar': typeof ComoChegarRoute
+  '/contato': typeof ContatoRoute
+  '/faq': typeof FaqRoute
+  '/funcionamento': typeof FuncionamentoRoute
+  '/galeria': typeof GaleriaRoute
+  '/ingressos': typeof IngressosRoute
+  '/regras': typeof RegrasRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/atracoes': typeof AtracoesRoute
+  '/como-chegar': typeof ComoChegarRoute
+  '/contato': typeof ContatoRoute
+  '/faq': typeof FaqRoute
+  '/funcionamento': typeof FuncionamentoRoute
+  '/galeria': typeof GaleriaRoute
+  '/ingressos': typeof IngressosRoute
+  '/regras': typeof RegrasRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/atracoes'
+    | '/como-chegar'
+    | '/contato'
+    | '/faq'
+    | '/funcionamento'
+    | '/galeria'
+    | '/ingressos'
+    | '/regras'
+    | '/sitemap.xml'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/atracoes'
+    | '/como-chegar'
+    | '/contato'
+    | '/faq'
+    | '/funcionamento'
+    | '/galeria'
+    | '/ingressos'
+    | '/regras'
+    | '/sitemap.xml'
+  id:
+    | '__root__'
+    | '/'
+    | '/atracoes'
+    | '/como-chegar'
+    | '/contato'
+    | '/faq'
+    | '/funcionamento'
+    | '/galeria'
+    | '/ingressos'
+    | '/regras'
+    | '/sitemap.xml'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AtracoesRoute: typeof AtracoesRoute
+  ComoChegarRoute: typeof ComoChegarRoute
+  ContatoRoute: typeof ContatoRoute
+  FaqRoute: typeof FaqRoute
+  FuncionamentoRoute: typeof FuncionamentoRoute
+  GaleriaRoute: typeof GaleriaRoute
+  IngressosRoute: typeof IngressosRoute
+  RegrasRoute: typeof RegrasRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +169,83 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/atracoes': {
+      id: '/atracoes'
+      path: '/atracoes'
+      fullPath: '/atracoes'
+      preLoaderRoute: typeof AtracoesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/como-chegar': {
+      id: '/como-chegar'
+      path: '/como-chegar'
+      fullPath: '/como-chegar'
+      preLoaderRoute: typeof ComoChegarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contato': {
+      id: '/contato'
+      path: '/contato'
+      fullPath: '/contato'
+      preLoaderRoute: typeof ContatoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/funcionamento': {
+      id: '/funcionamento'
+      path: '/funcionamento'
+      fullPath: '/funcionamento'
+      preLoaderRoute: typeof FuncionamentoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/galeria': {
+      id: '/galeria'
+      path: '/galeria'
+      fullPath: '/galeria'
+      preLoaderRoute: typeof GaleriaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ingressos': {
+      id: '/ingressos'
+      path: '/ingressos'
+      fullPath: '/ingressos'
+      preLoaderRoute: typeof IngressosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/regras': {
+      id: '/regras'
+      path: '/regras'
+      fullPath: '/regras'
+      preLoaderRoute: typeof RegrasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AtracoesRoute: AtracoesRoute,
+  ComoChegarRoute: ComoChegarRoute,
+  ContatoRoute: ContatoRoute,
+  FaqRoute: FaqRoute,
+  FuncionamentoRoute: FuncionamentoRoute,
+  GaleriaRoute: GaleriaRoute,
+  IngressosRoute: IngressosRoute,
+  RegrasRoute: RegrasRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
