@@ -27,7 +27,7 @@ function Index() {
         <Wave />
       </section>
 
-      <section className="mx-auto -mt-10 max-w-6xl px-4">
+      <section className="relative z-10 mx-auto -mt-10 max-w-6xl px-4">
         <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-6">
           {destaques.map((d) => (
             <div key={d.rotulo} className="rounded-3xl bg-card p-5 text-center shadow-soft">
